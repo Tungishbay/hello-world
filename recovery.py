@@ -46,7 +46,7 @@ def echo_message(message):
 			mess += message.text + '\')'
 			cur.execute(mess)
 			conn.commit()
-			bot.send_message(message.chat.id, "Ваши данные в базе данных")
+			bot.send_message(message.chat.id, "Your data in database")
 			break
 		else:
 			if row[0] == message.from_user.id:
