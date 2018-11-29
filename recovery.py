@@ -74,7 +74,7 @@ if "HEROKU" in list(os.environ.keys()):
     @server.route("/")
     def webhook():
         bot.remove_webhook()
-        bot.set_webhook(url="")
+        bot.set_webhook(url="https://stark-mountain-74246.herokuapp.com/bot")
         return "?", 200
     server.run(host="0.0.0.0", port=os.environ.get('PORT', 80))
 else:
